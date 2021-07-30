@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-element</title>
+    <style>
+        h1::before{
+            content: 'Hello ';
+            color: aqua;
+        }
+        h1::after{
+            content: ' galo';
+            color: blue;
+        }
+        blockquote::before{
+            content: open-quote;
+            color: crimson;
+            font-size: 1.5em;
+        }
+        blockquote::after{
+            content: close-quote;
+            color: crimson;
+            font-size: 1.5em;
+        }
+        .section-title{
+            display: inline-block;
+        }
+        .section-title::after, .section-title::before{
+            content: '';
+            display: block;
+            background-color: mediumvioletred;
+            height: 2px;
+            width: 100%;   
+        }
+    </style>
+</head>
+<body>
+    <h1>Having fun with pseudo pseudo vai bon</h1>
+    <section>
+        <h2 class="section-title">Best Quotes</h2>
+        <blockquote>Whatever the mind can conceive and believe, it can achieve.
+        </blockquote>
+        <blockquote>When your desires are strong enough, you will appear to possess superhuman powers to achieve.</blockquote>
+        <blockquote>Every adversity, every failure, every heartache carries with it the seed of an equal or greater benefit.</blockquote>
+    </section>
+</body>
+</html>
